@@ -39,6 +39,9 @@ stdin.on('data', data => {
 });
 
 // exit event handlу
+process.on('SIGINT', function () {
+    process.exit();
+});
 process.on('exit', code => {
     if (code === 0) {
         stderr.write('До свидания');
@@ -46,3 +49,5 @@ process.on('exit', code => {
         stderr.write(`Что-то пошло не так. Программа завершилась с кодом ${code}`);
     }
 });
+
+

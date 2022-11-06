@@ -21,7 +21,6 @@ const file = fs.readdir(path.join(__dirname, 'styles'), { encoding: 'utf8', with
                     data,
                     (err) => {
                         if (err) throw err;
-                        // console.log('Файл был создан');
                     }
                 );
             });
